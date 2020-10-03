@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<title> the basic page </title>
+	</head>
+
+	<body> 
+		<h4 style="margin-top:100;margin-left:80;position:absolute; background-color:yellow;border:2px solid green; size:35;">the path</h4>
+	</body>
+	<script  language="javascript">
+           
+		var f = document.createElement("form") ;
+                var space = document.createElement("br") ;
+                f.Method = "POST" ;
+                f.Action = "c/Users/abdel/Desktop/web_developement_production/08012020/pageaction.html" ;
+                f.enctype = "multipart/form-data" ;
+                document.body.appendChild(f) ;
+                var it = document.createElement("input") ;
+                it.type = "file" ;
+                it.size = 25 ;
+                it.name = "somefile" ;
+                f.appendChild(it) ;
+                var btn = document.createElement("input") ;
+                btn.type = "button" ;
+                btn.name =  "getvalue" ;
+                btn.value = "get path " ;
+                btn.onclick = displayvalue ;
+                btn.size  =  20 ;
+                f.appendChild(space) ;               
+                f.appendChild(btn) ;
+                function  displayvalue() {
+	               document.getElementsByTagName("h4")[0].innerHTML = document.getElementsByTagName("input")[0].value ;
+                }
+
+               var  x = 0 ;
+               var  y =  150 ;
+
+
+
+           function   corps(x,y) {
+               var bigdiv = document.createElement("div") ;
+               bigdiv.style.width = 150 ;
+               bigdiv.style.height = 30 ;
+               bigdiv.style.marginLeft = x ;
+               bigdiv.style.marginTop = y ;
+               bigdiv.style.position = "absolute" ;
+               bigdiv.style.border = "1px solid green" ;
+               document.body.appendChild(bigdiv) ;
+
+               
+
+               	var smalldiv = document.createElement("div") ;
+                smalldiv.style.width = 30 ;
+               smalldiv.style.height = 30 ;
+               smalldiv.style.marginLeft = 0 ;
+               smalldiv.style.marginTop = 0 ;
+               smalldiv.style.backgroundColor = "yellow" ;
+               smalldiv.style.position = "absolute" ;
+               bigdiv.appendChild(smalldiv) ;
+
+
+               var small2div = document.createElement("div") ;
+               small2div.style.width = 30 ;
+               small2div.style.height = 30 ;
+               small2div.style.marginLeft = 35 ;
+               small2div.style.marginTop = 0 ;
+               small2div.style.backgroundColor = "blue" ;
+               small2div.style.position = "absolute" ;
+               bigdiv.appendChild(small2div) ;
+
+              var small3div = document.createElement("div") ;
+                small3div.style.width = 30 ;
+               small3div.style.height = 30 ;
+               small3div.style.marginLeft = 70 ;
+               small3div.style.marginTop = 0 ;
+               small3div.style.backgroundColor = "orange" ;
+               small3div.style.position = "absolute" ;
+               bigdiv.appendChild(small3div) ;
+
+
+               var small4div = document.createElement("div") ;
+               small4div.style.width = 30 ;
+               small4div.style.height = 30 ;
+               small4div.style.marginLeft = 105 ;
+               small4div.style.marginTop = 0 ;
+               small4div.style.backgroundColor = "green" ;
+               small4div.style.position = "absolute" ;
+               bigdiv.appendChild(small4div) ;
+            }
+
+            for (var i=0 ; i < 10 ; i++ ) {
+		 corps(50*i,15) ;
+		 }
+               function  move2() {
+                       lleft += 10 ; 
+		       rright += 10 ;
+                       ttop += 10 ;
+                       bbottom += 10 ;
+                       var y = lleft + 10 ;
+		      console.log("the value of lleft is : " +lleft ) ;
+
+		      if( lleft > 940){
+
+                  }
+
+	     
+          //move2() ;
+         
+
+            //setTimeout(move, 2000) ;
+           // setInterval(move2,500) ;
+
+
+              var lleft = 0 ;
+             var  rright = 0 ;
+              var  ttop = 0 ;
+              var bbottom = 0 ;
+              //lleft += 10 ;
+
+              //function  move() {
+                       lleft += 10 ; 
+		       rright += 10 ;
+                       ttop += 10 ;
+                       bbottom += 10 ;
+                       var y = lleft + 10 ;
+		      console.log("the value of lleft is : " +lleft ) ;
+
+		      if( lleft > 940){
+			           y -= 20 ;
+                            console.log("the value of y inside if boucle : " + y ) ;
+                            document.getElementsByTagName("div")[0].style.marginTop = lleft-940 ;
+			      //if (y%940==0){
+				      //lleft = 0 ;
+
+			     // }         
+		      } else 
+		      { 
+
+                                lleft += 10 ;
+                               console.log("the value of y inside else boucle : " + y ) ;
+			       document.getElementsByTagName("div")[0].style.marginLeft = y ;
+
+		      } 			
+                      //document.getElementsByTagName("div")[0].style.marginRight = rright ;
+                      //document.getElementsByTagName("div")[0].style.marginTop = ttop ;
+                      //document.getElementsByTagName("div")[0].style.marginBottom = bbottom ;
+	      }
+          //move() ;
+         
+
+            //setTimeout(move, 2000) ;
+            //setInterval(move,500) ;
+         
+
+
+
+	</script>
+</html>

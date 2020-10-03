@@ -1,0 +1,327 @@
+<html>
+
+	<head>
+		<title>working</title>
+	</head>
+
+	<body onKeyDown = "value(event) ;" >    <!--onLoad= " addvoiceforever() ;" --> 
+         	charCode is :<h3  style="position:absolute; margin-left:380;margin_top:5; background-color:yellow;">the Best Game</h3>
+		<br> 
+               keyCode is :<h3  style="position:absolute; margin-left:180;margin_top:5; background-color:green;">the Best Game</h3>
+
+                 
+	</body>
+	<script  language="javascript"  > 
+
+		//function value(e) {
+		        	//document.getElementsByTagName("h3")[0].innerHTML += e.charCode ;
+                        	//document.getElementsByTagName("h3")[1].innerHTML += e.keyCode ;
+
+                                 //} 
+
+
+		//var theimg= document.createElement("img") ;
+                //theimg.style.width = 770 ;
+                //theimg.style.height = 250 ;
+                //theimg.style.src  = "1.jpg"
+
+
+
+
+
+
+		var bigdiv = document.createElement("div") ;
+                bigdiv.style.width = 770 ;
+                bigdiv.style.height = 250  ;
+                //bigdiv.style.backgroundImage = "url(2.jpg)" ;
+                bigdiv.style.position ="absolute" ;
+                bigdiv.style.marginLeft = 130 ;
+                bigdiv.style.marginTop = 40  ;
+                bigdiv.style.border = "4px groove orange" ;
+               	bigdiv.style.zIndex = 2 ;
+                bigdiv.onload = addvoiceforever ;
+                document.body.appendChild(bigdiv) ;
+                
+            function  player(distance,obc,mgt,allmgt,opc,x,y) {
+                var tete = document.createElement("div") ;
+                tete.style.width = 10+x ;
+                tete.style.height = 10 +y ;
+                tete.style.position ="absolute" ;
+                tete.style.marginLeft = 25 + distance ;
+                tete.style.marginTop = allmgt  ;
+                //tete.style.border = "5px groove green" ;
+		tete.style.backgroundColor = obc ;
+	        tete.style.opacity =  opc ;
+		tete.style.zIndex =  1 ;
+		bigdiv.appendChild(tete) ;
+
+         	var epaule = document.createElement("div") ;
+                epaule.style.width = 60 + x ;
+                epaule.style.height = 10 + y  ;
+                epaule.style.position ="absolute" ;
+                epaule.style.marginLeft = distance ;
+                epaule.style.marginTop = 10 + allmgt   ;
+                //epaule.style.border = "4px groove yellow" ;
+		epaule.style.backgroundColor = obc ;
+		epaule.style.zIndex =  1 ;
+		epaule.style.opacity =  opc ; 
+		bigdiv.appendChild(epaule) ;
+
+         	var brasdroit = document.createElement("div") ;
+                brasdroit.style.width = 5+x ;
+                brasdroit.style.height = 30+y  ;
+                brasdroit.style.position ="absolute" ;
+                brasdroit.style.marginLeft =  distance ;
+                brasdroit.style.marginTop =  allmgt+20  ;
+                //brasdroit.style.border = "4px groove orange" ;
+		brasdroit.style.backgroundColor = obc ;
+         	brasdroit.style.zIndex =  1 ;
+                brasdroit.style.opacity =  opc ;
+		bigdiv.appendChild(brasdroit) ;
+
+                var brasgauche = document.createElement("div") ;
+                brasgauche.style.width = 5+x ;
+                brasgauche.style.height = 30+y  ;
+                brasgauche.style.position ="absolute" ;
+                brasgauche.style.marginLeft = 55 + distance ;
+                brasgauche.style.marginTop = mgt+ allmgt    ;
+		brasgauche.style.backgroundColor = obc ;
+                //brasgauche.style.border = "4px groove orange" ;
+		brasgauche.style.zIndex =  1 ;
+                brasgauche.style.opacity =  opc ;
+		bigdiv.appendChild(brasgauche) ;    
+
+          	var ventre = document.createElement("div") ;
+                ventre.style.width = 30+x ;
+                ventre.style.height = 50 +y ;
+                ventre.style.position ="absolute" ;
+                ventre.style.marginLeft = 15 + distance ;
+                ventre.style.marginTop = 20+ allmgt    ;
+                ventre.style.backgroundColor = obc ;
+		//ventre.style.border = "4px groove orange" ;
+	        ventre.style.zIndex = 1 ;
+                ventre.style.opacity =  opc ;
+		bigdiv.appendChild(ventre) ;
+                
+        	var pieddroit = document.createElement("div") ;
+                pieddroit.style.width = 5+x ;
+                pieddroit.style.height = 35+y  ;
+                pieddroit.style.position ="absolute" ;
+                pieddroit.style.marginLeft =15 + distance ;
+                pieddroit.style.marginTop = 70 + allmgt  ;
+		pieddroit.style.backgroundColor = obc ;
+                //pieddroit.style.border = "4px groove orange" ;
+	        pieddroit.style.zIndex =  1 ;
+		pieddroit.style.opacity = opc ;
+		bigdiv.appendChild(pieddroit) ;
+
+          
+		var piedgauche = document.createElement("div") ;
+                piedgauche.style.width = 5+x ;
+                piedgauche.style.height = 35+y  ;
+                piedgauche.style.position ="absolute" ;
+                piedgauche.style.marginLeft = 40 + distance ;
+                piedgauche.style.marginTop =  allmgt + 70  ;
+		piedgauche.style.backgroundColor = obc ;
+                //piedgauche.style.border = "4px groove orange" ;
+		piedgauche.style.zIndex =  1 ;
+                piedgauche.style.opacity =  opc ;
+		bigdiv.appendChild(piedgauche) ;
+
+               }
+
+                player(100,"orange",0,20,100,10,10) ; 
+          function  addvoiceforever() {
+
+			var embed =  document.createElement("embed") ;
+			embed.name = "jukebox" ;
+			embed.src = "b1.3gpp" ;
+			embed.width = 1 ;
+			embed.height = 1 ;
+			document.body.appendChild(embed) ;
+
+	       }
+
+
+
+
+
+	      function  addvoice(path) {
+
+			var embed =  document.createElement("embed") ;
+			embed.name = "jukebox" ;
+			embed.src = path ;
+			embed.width = 1 ;
+			embed.height = 1 ;
+			document.body.appendChild(embed) ;
+
+	       }
+
+
+		 var el = 70 ;
+                 var allmgt = 0 ;
+                 var mgt1 = 20 ;
+                 var i  = -1 ;
+                 var j =  -1 ;
+                 var opc = 100 ;
+		 var bag = new Array() ;
+                 var bag2 = new Array() ;
+		 function value(e) {
+		     var evt = e.keyCode  ;    
+			 
+                       AA :
+			 if(evt===39){ 
+                           if(el > 680){
+				   console.log("the value of  el : " + el ) ;
+				   break AA  
+			   }
+
+				 i++ ;
+				 console.log("first if loop..") ;
+
+			         var four = new player(el,"yellow",mgt1,allmgt,opc) ;
+				 el += 70 ;
+				 if(i%2===0){
+					
+                                 //mgt += 40 ;
+                                 var one = new player(el,"green",mgt1-30,allmgt,opc) ;
+                                 document.getElementsByTagName("div")[0].style.zIndex =  3  ;
+				 document.getElementsByTagName("div")[0].style.backgroundImage="url(1.jpg)" ;
+		                 addvoice("b2.3gpp")  ;
+		                 //bag.push(one) ;
+				 }else {
+                                 //mgt += 40 ;
+                                 var one = new player(el,"green",mgt1,allmgt,opc) ;
+		                 //addvoice("b2.3gpp")  ;
+		                 //bag.push(one) ;
+                               }
+                           }   
+			AB :
+                        if(evt===37) {
+			    if( el < 60){ 
+		                    console.log("the value of  el : " + el ) ;
+				    break AB 
+			   }
+
+                           console.log("second if loop " ) ;
+
+			   var one = new player(el,"white",mgt1,allmgt,opc) ;
+		           el -= 70 ;
+			   //mgt += 40 ;
+                           addvoice("c1.3gpp") ;
+                           var two = new player(el,"black",mgt1-30,allmgt,opc) ;
+		           bag2.push(two) ; 
+		              } 
+		       AC :
+                       if(evt===38) {
+			   //allmgt = 250 ;
+                           if(allmgt < 20){ 
+		                    console.log("the value of  allmgt in 38 : " + allmgt ) ;
+				    break AC 
+			   }
+
+                           console.log("third if loop " ) ;
+
+			   var one = new player(el,"white",mgt1,allmgt,opc) ;
+		           //el -= 70 ;
+			   allmgt -= 20 ;
+			   //mgt += 40 ;
+                           addvoice("c1.3gpp") ;
+                           var two = new player(el,"black",mgt1-30,allmgt,opc) ;
+		           bag2.push(two) ; 
+		              } 
+		       AD :
+                       if(evt===40) {
+                           if(allmgt > 125){
+				    console.log("the value of  allmgt in 40 is  : " + allmgt ) ;
+			            break AD 
+			   }
+                           console.log("fourth if loop " ) ;
+
+			   var one = new player(el,"white",mgt1,allmgt,opc) ;
+		           //el -= 70 ;
+			   allmgt += 20 ;
+			   //mgt += 40 ;
+                           addvoice("c1.3gpp") ;
+                           var two = new player(el,"black",mgt1-30,allmgt,opc) ;
+		           bag2.push(two) ; 
+		              }
+
+
+
+		 }
+         	var big2div = document.createElement("div") ;
+                big2div.style.width = 770 ;
+                big2div.style.height = 10  ;
+                //bigdiv.style.backgroundImage = "url(2.jpg)" ;
+                big2div.style.position ="absolute" ;
+                big2div.style.marginLeft = 130 ;
+                big2div.style.marginTop = 40  ;
+                //big2div.style.border = "2px solid orange" ;
+                //bigdiv.onload = addvoiceforever ;
+                document.body.appendChild(big2div) ;
+
+             
+       
+             thergb1 = Math.floor(Math.random()*255) ;
+
+
+         function  addennemy(numberofennemy,ecart,descente,theopc,thecol) {
+
+
+		  var ecart = 0 ;
+		  thergb1 = Math.floor(Math.random()*255) ;
+
+
+	         for( var i=0 ; i< numberofennemy ; i++ ) {
+                         ecart += 10 ;
+			 var ennemy = document.createElement("div") ;
+			 ennemy.style.width = 10 ;
+			 ennemy.style.height = 10 ;
+		         if(i%2===0){
+			  ennemy.style.border = "1px solid white" ;
+	                  ennemy.style.backgroundColor = thecol ;
+			  ennemy.style.opacity = 0  ;
+			  ennemy.style.position = "absolute" ;
+			  ennemy.style.marginLeft = 0 + ecart ;
+                          ennemy.style.marginTop = 0 + descente ;
+			 big2div.appendChild(ennemy) ;
+                        } else
+		        { 
+                         ennemy.style.border = "1px solid white" ;
+		         ennemy.style.backgroundColor = (0,0,0) ;
+			 ennemy.style.opacity = theopc  ;
+			 ennemy.style.position = "absolute" ;
+			 ennemy.style.marginLeft = 0 + ecart ;
+                         ennemy.style.marginTop = 0 + descente ;
+			 big2div.appendChild(ennemy) ;
+                        }
+            
+
+		 } 
+            }
+           // var v = 10 ;
+	    //var v1 = 10 ;
+	   // var abc = 100 ;
+           // var sac = new Array() ;
+            //var i  = -1 ;
+	   
+
+		 //function test() {
+		 //v += 10 ;
+	    var tt = new  addennemy(72,0,0,100,(thergb1,thergb1,thergb1) )  ;
+		 var ttop = 40 ;
+
+		 function moveennemy() {
+		  ttop += 10 ;
+		  document.getElementsByTagName("div")[1].style.marginTop = ttop ;
+		 if(ttop > 260 ){
+			 ttop = 40 ;
+        		 }
+			 
+		 }
+             //setTimeout(moveennemy, 2000) ;
+	     //setInterval(moveennemy, 1000) ;
+
+</script>
+</html>
